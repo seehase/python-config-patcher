@@ -68,3 +68,12 @@ color = indigo
                 chart_position_9 = 0
                 max_chart_position = 1
                 flip_values = no
+
+[Labels]
+    [[Generic]]
+        extraTemp1 = Wintergarden Temperature
+        extraHumid1 = Wintergarden Humidity
+        extraTemp2 = Outdoor2 Temperature
+        extraHumid2 = Outdoor2 Humidity
+        extraTemp3 = Cellar Temperature
+        extraHumid3 = Cellar Humidity

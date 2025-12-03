@@ -9,7 +9,7 @@ Source: https://github.com/seehase/python-config-patcher
 
 Usage: usage: config_patcher.py [-h] source patch [-o OUTFILE]
 """
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 def parse_config(file_path):
     config = {}
@@ -149,6 +149,12 @@ def write_config(config, patch_config, source_file_path, output_file_path):
         add_new_items_for_section(path, level)
     
     output_lines.extend(comment_buffer)
+
+    # Add new top-level sections from the patch
+    for section_name, section_content in patch_config.items():
+        if section_name not in source_config:
+            output_lines.append(f"\n[{section_name}]\n")
+            output_lines.extend(format_new_items(section_content, 1))
 
     with open(output_file_path, 'w') as f:
         f.writelines(output_lines)

@@ -709,3 +709,12 @@
 # This section describes all generators mentioned above
 [Generators]
     generator_list = weewx.cheetahgenerator.CheetahGenerator, weewx.reportengine.CopyGenerator
+
+[Labels]
+    [[Generic]]
+        extraTemp1 = Wintergarden Temperature
+        extraHumid1 = Wintergarden Humidity
+        extraTemp2 = Outdoor2 Temperature
+        extraHumid2 = Outdoor2 Humidity
+        extraTemp3 = Cellar Temperature
+        extraHumid3 = Cellar Humidity
